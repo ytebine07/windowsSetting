@@ -1,0 +1,21 @@
+
+//変数の定義
+$WORKER		=	"";
+$WORK_DATE	=	"20" + date + "\t" + time;
+
+//ヘッダー作成
+$HEADER  = "";
+$HEADER  = $HEADER + "■" + basename +"\n";
+$HEADER  = $HEADER + "\n";
+$HEADER  = $HEADER + "\t作業者\t\t：\t\n";
+$HEADER  = $HEADER + "\t作業時刻\t：\t" + $WORK_DATE + "～\n";
+$HEADER  = $HEADER + "\t確認者\t\t：\t\n";
+$HEADER  = $HEADER + "\n";
+$HEADER  = $HEADER + "==========================================================\n";
+$HEADER  = $HEADER + "■";
+
+//画面出力
+insertfix	$HEADER;
+
+//カーソルをファイル末尾に移動
+gofileend;
