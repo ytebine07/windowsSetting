@@ -2,87 +2,192 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-
 ;-------------------------------
 ; include
 ;-------------------------------
 #Include %A_ScriptDir%
-
-
 ;-------------------------------
-; ‘S‘Ì‹¤’Ê
+; å…¨ä½“å…±é€š
 ;-------------------------------
-; ‰EShift + ª‚ÅƒAƒ“ƒ_[ƒo[
+; å³Shift + â†‘ã§ã‚¢ãƒ³ãƒ€ãƒ¼ãƒãƒ¼
 >+UP::
 send,_
 return
-
-
+; Ctrl + q ã§Cliborå‘¼ã³å‡ºã—
+; Ctrl + F1 ã§Cliborèµ·å‹•ã¯ã€Cliborå´ã®è¨­å®š
+^q::
+send,^{F1}
+return
 ;-------------------------------
-; ‘S‘Ì‹¤’Ê(“Á’èƒAƒvƒŠƒP[ƒVƒ‡ƒ“ˆÈŠO)
+; å…¨ä½“å…±é€š(ç‰¹å®šã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ä»¥å¤–)
 ;-------------------------------
-#IfWinNotActive ahk_class PuTTY
-    ; Ctrl + j ‚Å ƒGƒ“ƒ^[
+#IF !WinActive("ahk_class PuTTY") AND !WinActive("ahk_class TFrm_Clibor")
+    ; Ctrl + j ã§ ã‚¨ãƒ³ã‚¿ãƒ¼
     ^j::
     send,{return}
     return
-
-    ; Ctrl + h ‚Å ƒoƒbƒNƒXƒy[ƒX
+    ; Ctrl + h ã§ ãƒãƒƒã‚¯ã‚¹ãƒšãƒ¼ã‚¹
     ^h::
     send,{BS}
     return
-
-    ; Ctrl + b ‚Å ¶‚ÉˆÚ“®
+    ; Ctrl + b ã§ å·¦ã«ç§»å‹•
     ^b::
     send,{LEFT}
     return
-
-    ; Ctrl + a ‚Ås“ª
+    ; Ctrl + l ã§ å³ã«ç§»å‹•
+    ^l::
+    send,{RIGHT}
+    return
+    ; Ctrl + a ã§è¡Œé ­
     ^a::
     send,{HOME}
     return
-
-    ; Ctrl + e ‚Å s––
+    ; Ctrl + e ã§ è¡Œæœ«
     ^e::
     send,{END}
     return
-
-    ; Ctrl + k ‚Å‘I‘ğ‰ÓŠ‚©‚çŒã‚ë‚ğíœ
+    ; Ctrl + k ã§é¸æŠç®‡æ‰€ã‹ã‚‰å¾Œã‚ã‚’å‰Šé™¤
     ^k::
     send,+{END}
     send,{BS}
     return
-
-    ; Ctrl + ; ‚ÅF10(Mac‚Æ‘µ‚¦‚é)
+    ; Ctrl + ; ã§F10(Macã¨æƒãˆã‚‹)
     ^;::
     send,{F10}
     return
-
-    ; ƒfƒoƒbƒO—p
+    ; ãƒ‡ãƒãƒƒã‚°ç”¨
     ;^q::
-    ;getIMEMode := IME_Get()
-    ;MsgBox, %getIMEMode%
+    ;MsgBox, "hoge"
     ;return
-
 #IF
-
 ;-------------------------------
-; GŠÛİ’è
+; ç§€ä¸¸è¨­å®š
 ;-------------------------------
 #ifWinActive ahk_class Hidemaru32Class
-
-    ; ˆÚ“®Œn
+    ; ç§»å‹•ç³»
     ^b::
     send {LEFT}
     return
+    ^n::
+    send {DOWN}
+    return
+    ^j::
+    send {return}
+    return
+    ^k::
+    send {UP}
+    return
+    ^p::
+    send {UP}
+    return
+#IF
+;-------------------------------
+; ãƒ¡ãƒ¼ãƒ©ãƒ¼è¨­å®š
+;-------------------------------
+#ifWinActive ahk_class rctrl_renwnd32
+    ; ç§»å‹•ç³»
+    ^n::
+    send {DOWN}
+    return
+    ^p::
+    send {UP}
+    return
+#IF
+;-------------------------------
+; Chrome
+;-------------------------------
+#ifWinActive ahk_class Chrome_WidgetWin_1
+    ^l::
+    send {RIGHT}
+    return
+    ; Ctrl + n ã§å·¦ã‚¿ãƒ–ã¸
+    ^n::
+    send ^+{Tab}
+    return
+    ; Ctrl + p ã§å³ã‚¿ãƒ–ã¸
+    ^p::
+    send ^{Tab}
+    return
+#IF
+;-------------------------------
+; Evernoteè¨­å®š
+;-------------------------------
+#IF WinActive("ahk_class ENMainFrame") OR WinActive("ahk_class ENSingleNoteView")
+    ^n::
+    send {DOWN}
+    return
+    ^k::
+    send {UP}
+    return
+    ^p::
+    send {UP}
+    return
+    ^l::
+    send,{RIGHT}
+    return
+#IF
+;-------------------------------
+; Cliborè¨­å®š
+;-------------------------------
+#ifWinActive ahk_class TFrm_Clibor
+    ^n::
+    send,{DOWN}
+    return
+    Tab::
+    send,{DOWN}
+    return
+    ^p::
+    send,{UP}
+    return
+    ^k::
+    send,{UP}
+    return
+    ^Tab::
+    send,{UP}
+    return
+    ^l::
+    send,{RIGHT}
+    return
+    ^j::
+    send,{return}
+    return
+    ^c::
+    send,{ESC}
+    return
+    ; Ctrl + q ã§æ¤œç´¢
+    ^q::    
+    send,{Tab}
+    return
+#IF
+;-------------------------------
+; é›»å“è¨­å®š
+:   windows7ã¾ã§
+;   windows10ã®é›»å“ã«ã¯é–‰ã˜ã‚‹ã‚’ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã§é€ã‚Œãªã„
+;-------------------------------
+#ifWinActive ahk_class CalcFrame
+
+    ; Ctrl + w ã§é–‰ã˜ã‚‹
+    ^w::
+    send,!{F4}
+    return
 
 #IF
-
 ;-------------------------------
-; ahkƒŠƒ[ƒh
+; ã‚¨ã‚¯ã‚¹ãƒ—ãƒ­ãƒ¼ãƒ©è¨­å®š
+;-------------------------------
+#ifWinActive ahk_class CabinetWClass
+    ^n::
+    send,{DOWN}
+    return
+    ^p::
+    send,{UP}
+    return
+#IF
+;-------------------------------
+; ahkãƒªãƒ­ãƒ¼ãƒ‰
 ;-------------------------------
 #IfWinActive, tebine.ahk
-    ; •Û‘¶‚Æ“¯‚ÉƒŠƒ[ƒh
+    ; ä¿å­˜ã¨åŒæ™‚ã«ãƒªãƒ­ãƒ¼ãƒ‰
     ^s::
         Send,^s
         Reload
