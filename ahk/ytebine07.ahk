@@ -161,7 +161,7 @@ return
 #IF
 ;-------------------------------
 ; 電卓設定
-:   windows7まで
+;   windows7まで
 ;   windows10の電卓には閉じるをキーボードで送れない
 ;-------------------------------
 #ifWinActive ahk_class CalcFrame
