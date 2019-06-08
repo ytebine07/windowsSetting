@@ -1,0 +1,26 @@
+{
+  "settingsVersion": "1.64.6",
+  "exclusionRules": [
+    {
+      "pattern": "https?://mail.google.com/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "map <c-w> removeTab\nmap o Vomnibar.activate\nmap t Vomnibar.activateInNewTab",
+  "linkHintCharacters": "ik;onhu",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 120,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "ww: http://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ny: http://search.yahoo.co.jp/search?p=%s&aq=-1&oq=&ei=UTF-8&fr=top_ga1_sa&x=wrt Yahoo!Japan\ng: http://www.google.com/search?q=%s Google\ngd: https://www.google.com/search?gl=us&hl=en&pws=0&q=%s Google.com(米国)\nauc: http://auctions.search.yahoo.co.jp/search?auccat=&tab_ex=commerce&ei=utf-8&aq=-1&oq=&sc_i=&fr=auc_top&p=%s&x=0&y=0 ヤフオク！\nshop: http://search.shopping.yahoo.co.jp/search?ei=UTF-8&rkf=1&sc_i=shp_pc_promo_searchBox&cid=&p=%s Yahoo!ショッピング\nama: https://www.amazon.co.jp/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=%s Amazon\namazon: https://www.amazon.co.jp/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=%s Amazon\nyoutube: https://www.youtube.com/results?search_query=%s youtube\nunix: http://tool.konisimple.net/date/unixtime?input=%s Unixtime→JST\nmap: https://www.google.co.jp/maps/place/%s GoolgeMap\nw: https://ejje.weblio.jp/content/%s weblio",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,gray),\n  color-stop(100%,gray));\n  border: 0px;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: #ffffff;\nfont-weight: bold;\nfont-size: 16px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
