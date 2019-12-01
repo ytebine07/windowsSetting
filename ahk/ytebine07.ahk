@@ -51,8 +51,8 @@ return
     send,+{END}
     send,{BS}
     return
-    ; Ctrl + ; でF10(Macと揃える)
-    ^;::
+    ; Ctrl + : でF10(Macと揃える)
+    ^vkBA::
     send,{F10}
     return
     ; デバッグ用
