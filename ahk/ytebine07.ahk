@@ -78,6 +78,27 @@ return
     return
 #IF
 ;-------------------------------
+; Atom設定
+;-------------------------------
+#ifWinActive ahk_exe atom.exe
+    ; 移動系
+    ^b::
+    send {LEFT}
+    return
+    ^n::
+    send {DOWN}
+    return
+    ^j::
+    send {return}
+    return
+    ^k::
+    send {UP}
+    return
+    ^p::
+    send {UP}
+    return
+#IF
+;-------------------------------
 ; メーラー設定
 ;-------------------------------
 #ifWinActive ahk_class rctrl_renwnd32
@@ -151,7 +172,7 @@ return
     send,{ESC}
     return
     ; Ctrl + q で検索
-    ^q::    
+    ^q::
     send,{Tab}
     return
 #IF
