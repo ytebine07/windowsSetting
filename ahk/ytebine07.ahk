@@ -21,7 +21,7 @@ return
 ;-------------------------------
 ; 全体共通(特定アプリケーション以外)
 ;-------------------------------
-#IF !WinActive("ahk_class PuTTY") AND !WinActive("ahk_class TFrm_Clibor")
+#IF !WinActive("ahk_class PuTTY") AND !WinActive("ahk_class TFrm_Clibor") AND !WinActive("ahk_class mintty")
     ; Ctrl + j で エンター
     ^j::
     send,{return}
