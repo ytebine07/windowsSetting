@@ -2,6 +2,10 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+; キーリスト
+; https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+
 ;-------------------------------
 ; include
 ;-------------------------------
@@ -16,6 +20,9 @@ send,^{F1}
 return
 ;-------------------------------
 ; 全体共通(特定アプリケーション以外)
+; - Putty
+; - Clibor(クリップボード監視）
+; - git bash
 ;-------------------------------
 #IF !WinActive("ahk_class PuTTY") AND !WinActive("ahk_class TFrm_Clibor") AND !WinActive("ahk_class mintty")
     ; Ctrl + j で エンター
@@ -51,6 +58,27 @@ return
     ^vkBA::
     send,{F10}
     return
+
+    ; Alt + C でコピー（Macぽく）
+    LAlt & c::
+    send,^c
+    return
+
+    ; Alt + x でカット（Macぽく）
+    LAlt & x::
+    send,^x
+    return
+
+    ; Alt + v で貼り付け（Macぽく）
+    LAlt & v::
+    send,^v
+    return
+
+    ; Alt + s で保存（Macぽく）
+    LAlt & s::
+    send,^s
+    return
+
     ; デバッグ用
     ;^q::
     ;MsgBox, "hoge"
