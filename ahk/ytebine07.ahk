@@ -79,6 +79,16 @@ return
     send,^s
     return
 
+    ; Alt + f でCtrl + f(Macぽく)
+    LAlt & f::
+    send,^f
+    return
+
+    ; Alt + z でCtrl + z(Macぽく)
+    LAlt & z::
+    send,^z
+    return
+
     ; デバッグ用
     ;^q::
     ;MsgBox, "hoge"
