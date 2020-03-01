@@ -228,6 +228,15 @@ return
     return
 #IF
 ;-------------------------------
+; Bashのプロンプト設定
+;-------------------------------
+#IfWinActive ahk_exe mintty.exe
+    ; 右クリック で貼り付け
+    RButton::
+    send {Shift}{Ins}
+    return
+#IF
+;-------------------------------
 ; 電卓設定
 ;   windows7まで
 ;   windows10の電卓には閉じるをキーボードで送れない
