@@ -151,7 +151,7 @@ return
 ;-------------------------------
 ; Chrome
 ;-------------------------------
-#ifWinActive ahk_class Chrome_WidgetWin_1
+#ifWinActive ahk_exe chrome.exe
     ^l::
     send {RIGHT}
     return
@@ -212,6 +212,19 @@ return
     ; Ctrl + q で検索
     ^q::
     send,{Tab}
+    return
+#IF
+;-------------------------------
+; VSCode設定
+; VSCodeの設定は、MacとWinで設定共通化したい。
+; Winのみのキーマップなので、ここで設定。
+;-------------------------------
+#IfWinActive ahk_exe Code.exe
+    ^n::
+    send {DOWN}
+    return
+    ^p::
+    send {UP}
     return
 #IF
 ;-------------------------------
