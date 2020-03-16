@@ -157,11 +157,11 @@ return
     return
     ; Ctrl + n で左タブへ
     ^n::
-    send ^+{Tab}
+    send {DOWN}
     return
     ; Ctrl + p で右タブへ
     ^p::
-    send ^{Tab}
+    send {UP}
     return
 #IF
 ;-------------------------------
