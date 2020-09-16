@@ -250,6 +250,25 @@ return
 
 #IF
 ;-------------------------------
+; LINE設定
+;-------------------------------
+#ifWinActive ahk_class Qt5QWindowIcon
+
+    ^n::
+    send {DOWN}
+    return
+    ^k::
+    send {UP}
+    return
+    ^p::
+    send {UP}
+    return
+    ^l::
+    send,{RIGHT}
+    return
+
+#IF
+;-------------------------------
 ; エクスプローラ設定
 ;-------------------------------
 #ifWinActive ahk_class CabinetWClass
