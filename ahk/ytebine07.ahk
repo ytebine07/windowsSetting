@@ -18,6 +18,21 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ^q::
 send,^{F1}
 return
+
+;-------------------------------
+; 全体共通(英語キーボード用)
+; 先頭の$は、無限ループに陥るのを回避してる
+;-------------------------------
+; ; で :
+$`;::
+send,`:
+return
+
+;Shift + : で ;
+$+`;::
+send,;
+return
+
 ;-------------------------------
 ; 全体共通(特定アプリケーション以外)
 ; - Putty
