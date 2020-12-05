@@ -284,6 +284,25 @@ return
 
 #IF
 ;-------------------------------
+; KeePass設定
+;-------------------------------
+#ifWinActive ahk_class WindowsForms10.Window.8.app.0.30495d1_r6_ad1
+
+    ^n::
+    send {DOWN}
+    return
+    ^k::
+    send {UP}
+    return
+    ^p::
+    send {UP}
+    return
+    ^l::
+    send,{RIGHT}
+    return
+
+#IF
+;-------------------------------
 ; エクスプローラ設定
 ;-------------------------------
 #ifWinActive ahk_class CabinetWClass
