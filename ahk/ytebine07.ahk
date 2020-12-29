@@ -4,7 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; キーリスト
-; https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+; http://ahkwiki.net/KeyList
 
 ;-------------------------------
 ; include
@@ -17,6 +17,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Ctrl + F1 でClibor起動は、Clibor側の設定
 ^q::
 send,^{F1}
+return
+
+; Alt + r で Windows + r(ファイル名を指定して実行)
+LAlt & r::
+send,#r
+return
+
+; Alt + e で Windows + e(Windowsエクスプローラを開く)
+LAlt & e::
+send,#e
 return
 
 ;-------------------------------
