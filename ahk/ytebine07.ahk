@@ -192,7 +192,7 @@ return
 ;-------------------------------
 ; Evernote設定
 ;-------------------------------
-#IF WinActive("ahk_class ENMainFrame") OR WinActive("ahk_class ENSingleNoteView")
+#IF WinActive("ahk_exe Evernote.exe")
     ^n::
     send {DOWN}
     return
