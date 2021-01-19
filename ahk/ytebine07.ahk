@@ -20,9 +20,9 @@ send,^{F1}
 return
 
 ; Alt + r で Windows + r(ファイル名を指定して実行)
-LAlt & r::
-send,#r
-return
+;LAlt & r::
+;send,#r
+;return
 
 ; Alt + e で Windows + e(Windowsエクスプローラを開く)
 LAlt & e::
@@ -324,9 +324,20 @@ return
     return
 #IF
 ;-------------------------------
+; Windows Power Lancher
+;-------------------------------
+#IfWinActive ahk_exe PowerLauncher.exe
+    ^n::
+    send,{DOWN}
+    return
+    ^p::
+    send,{UP}
+    return
+#IF
+;-------------------------------
 ; ahkリロード
 ;-------------------------------
-#IfWinActive, tebine.ahk
+#IfWinActive, ytebine07.ahk
     ; 保存と同時にリロード
     ^s::
         Send,^s
