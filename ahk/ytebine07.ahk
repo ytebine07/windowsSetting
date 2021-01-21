@@ -58,10 +58,6 @@ return
     ^h::
     send,{BS}
     return
-    ; Ctrl + b で 左に移動
-    ^b::
-    send,{LEFT}
-    return
     ; Ctrl + l で 右に移動
     ^l::
     send,{RIGHT}
