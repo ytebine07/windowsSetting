@@ -13,17 +13,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;-------------------------------
 ; 全体共通
 ;-------------------------------
-; Ctrl + q でClibor呼び出し
-; Ctrl + F1 でClibor起動は、Clibor側の設定
-^q::
-send,^{F1}
-return
-
-; Alt + r で Windows + r(ファイル名を指定して実行)
-;LAlt & r::
-;send,#r
-;return
-
 ; Alt + e で Windows + e(Windowsエクスプローラを開く)
 LAlt & e::
 send,#e
