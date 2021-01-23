@@ -59,27 +59,33 @@ return
     ^j::
     send,{return}
     return
+
     ; Ctrl + h で バックスペース
     ^h::
     send,{BS}
     return
+
     ; Ctrl + l で 右に移動
     ^l::
     send,{RIGHT}
     return
+
     ; Ctrl + a で行頭
     ^a::
     send,{HOME}
     return
+
     ; Ctrl + e で 行末
     ^e::
     send,{END}
     return
+
     ; Ctrl + k で選択箇所から後ろを削除
     ^k::
     send,+{END}
     send,{BS}
     return
+
     ; Ctrl + : でF10(Macと揃える)
     ^vkBA::
     send,{F10}
