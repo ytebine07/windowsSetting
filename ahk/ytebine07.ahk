@@ -173,6 +173,9 @@ return
 ; Chrome
 ;-------------------------------
 #ifWinActive ahk_exe chrome.exe
+    ^b::
+    send {LEFT}
+    return
     ^l::
     send {RIGHT}
     return
