@@ -158,18 +158,6 @@ return
     return
 #IF
 ;-------------------------------
-; メーラー設定
-;-------------------------------
-#ifWinActive ahk_class rctrl_renwnd32
-    ; 移動系
-    ^n::
-    send {DOWN}
-    return
-    ^p::
-    send {UP}
-    return
-#IF
-;-------------------------------
 ; Chrome
 ;-------------------------------
 #ifWinActive ahk_exe chrome.exe
