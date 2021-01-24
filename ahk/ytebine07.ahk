@@ -255,14 +255,11 @@ return
 #IF
 ;-------------------------------
 ; 電卓設定
-;   windows7まで
-;   windows10の電卓には閉じるをキーボードで送れない
 ;-------------------------------
-#ifWinActive ahk_class CalcFrame
+#ifWinActive ahk_exe ApplicationFrameHost.exe
 
-    ; Ctrl + w で閉じる
     ^w::
-    send,!{F4}
+    send !{F4}
     return
 
 #IF
