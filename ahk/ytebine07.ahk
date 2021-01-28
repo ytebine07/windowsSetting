@@ -161,6 +161,16 @@ return
 ; Chrome
 ;-------------------------------
 #ifWinActive ahk_exe chrome.exe
+    ; Ctrl + p で上
+    ^p::
+    send {UP}
+    return
+
+    ; Ctrl + n で下
+    ^n::
+    send {DOWN}
+    return
+
     ; Ctrl + b で右
     ^b::
     send {LEFT}
@@ -171,15 +181,6 @@ return
     send {RIGHT}
     return
 
-    ; Ctrl + n で左タブへ
-    ^n::
-    send {DOWN}
-    return
-
-    ; Ctrl + p で右タブへ
-    ^p::
-    send {UP}
-    return
 #IF
 ;-------------------------------
 ; Evernote設定
