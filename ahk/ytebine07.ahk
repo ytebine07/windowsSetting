@@ -161,9 +161,9 @@ return
 ; Chrome
 ;-------------------------------
 #ifWinActive ahk_exe chrome.exe
-    ; Ctrl + p で上
+    ; Ctrl + p で右タブへ
     ^p::
-    send,{UP}
+    send {UP}
     return
 
     ; Ctrl + n で左タブへ
