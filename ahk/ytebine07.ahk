@@ -163,22 +163,22 @@ return
 #ifWinActive ahk_exe chrome.exe
     ; Ctrl + p で上
     ^p::
-    send {UP}
+    send,{UP}
     return
 
-    ; Ctrl + n で下
+    ; Ctrl + n で左タブへ
     ^n::
     send {DOWN}
     return
 
     ; Ctrl + b で右
     ^b::
-    send {LEFT}
+    send,{LEFT}
     return
 
     ; Ctrl + l で左
     ^l::
-    send {RIGHT}
+    send,{RIGHT}
     return
 
 #IF
