@@ -39,11 +39,10 @@ return
 
 ;-------------------------------
 ; 全体共通(特定アプリケーション以外)
-; - Putty
 ; - Clibor(クリップボード監視）
 ; - git bash
 ;-------------------------------
-#IF !WinActive("ahk_class PuTTY") AND !WinActive("ahk_class TFrm_Clibor") AND !WinActive("ahk_class mintty")
+#IF !WinActive("ahk_class TFrm_Clibor") AND !WinActive("ahk_class mintty")
     ; Ctrl + j で エンター
     ^j::
     send,{return}
@@ -114,27 +113,6 @@ return
     ;^q::
     ;MsgBox, "hoge"
     ;return
-#IF
-;-------------------------------
-; 秀丸設定
-;-------------------------------
-#ifWinActive ahk_class Hidemaru32Class
-    ; 移動系
-    ^b::
-    send {LEFT}
-    return
-    ^n::
-    send {DOWN}
-    return
-    ^j::
-    send {return}
-    return
-    ^k::
-    send {UP}
-    return
-    ^p::
-    send {UP}
-    return
 #IF
 ;-------------------------------
 ; Atom設定
