@@ -234,16 +234,19 @@ return
 #IF
 ;-------------------------------
 ; VSCode設定
-; VSCodeの設定は、MacとWinで設定共通化したい。
-; Winのみのキーマップなので、ここで設定。
+; VSCodeの設定はWin,Mac共用したいので、基本的にVSCodeで設定する。
+; Winのみのキーマップはここで設定している。
 ;-------------------------------
 #IfWinActive ahk_exe Code.exe
+
     ^n::
-    send {DOWN}
+    send,{DOWN}
     return
+
     ^p::
-    send {UP}
+    send,{UP}
     return
+
 #IF
 ;-------------------------------
 ; Bashのプロンプト設定
