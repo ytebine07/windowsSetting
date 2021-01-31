@@ -313,10 +313,8 @@ return
 ;-------------------------------
 ; ahkリロード
 ;-------------------------------
-#IfWinActive, ytebine07.ahk
-    ; 保存と同時にリロード
-    ^s::
-        Send,^s
-        Reload
+#z::
+    sleep,100
+    MsgBox,リロードしました！
+    Reload
     return
-#IfWinActive
