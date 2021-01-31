@@ -69,10 +69,15 @@ return
     return
 
     ; Ctrl + k で選択箇所から後ろを削除
-    ^k::
-    send,+{END}
-    send,{BS}
-    return
+    ; - VSCodeでは設定したくない
+    ; - VSCode以外では設定したい
+    ; そのため、ブサイクだがここで個別設定している
+    #IF !WinActive("ahk_exe Code.exe")
+        ^k::
+        send,+{END}
+        send,{BS}
+        return
+    #IF
 
     ; Ctrl + : でF10(Macと揃える)
     ^vkBA::
