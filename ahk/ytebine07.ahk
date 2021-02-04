@@ -172,12 +172,19 @@ return
     ^n::
     send {DOWN}
     return
+
     ^k::
     send {UP}
     return
+
     ^p::
     send {UP}
     return
+
+    ^b::
+    send,{LEFT}
+    return
+
     ^l::
     send,{RIGHT}
     return
