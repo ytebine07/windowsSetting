@@ -1,5 +1,9 @@
 ﻿# キーマップを使いやすく変更します
-.regファイルをダブルクリップで実行後、再起動が必要。
+レジストリ操作は[Change Key](https://forest.watch.impress.co.jp/library/software/changekey/)で行い、該当レジストリをエクスポートしています。
+.regファイルをダブルクリップで適用後、再起動が必要。  
+
+## `caps-to-ctrl-reg`
+caps　 →　Ctrl  
 
 ## `win7-normal.reg`
 windows7の普通のキーボード用設定
