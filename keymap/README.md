@@ -1,17 +1,17 @@
-# ƒL[ƒ}ƒbƒv‚ðŽg‚¢‚â‚·‚­•ÏX‚µ‚Ü‚·
-.regƒtƒ@ƒCƒ‹‚ðƒ_ƒuƒ‹ƒNƒŠƒbƒv‚ÅŽÀsŒãAÄ‹N“®‚ª•K—vB
+ï»¿# ã‚­ãƒ¼ãƒžãƒƒãƒ—ã‚’ä½¿ã„ã‚„ã™ãå¤‰æ›´ã—ã¾ã™
+.regãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒãƒ—ã§å®Ÿè¡Œå¾Œã€å†èµ·å‹•ãŒå¿…è¦ã€‚
 
 ## `win7-normal.reg`
-windows7‚Ì•’Ê‚ÌƒL[ƒ{[ƒh—pÝ’è
+windows7ã®æ™®é€šã®ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ç”¨è¨­å®š
 
-–³•ÏŠ·@¨@windwos    
-•ÏŠ·@@¨@”¼Šp/‘SŠp  
-caps@ ¨@Ctrl  
+ç„¡å¤‰æ›ã€€â†’ã€€windwos    
+å¤‰æ›ã€€ã€€â†’ã€€åŠè§’/å…¨è§’  
+capsã€€ â†’ã€€Ctrl  
 
 
 ## `win7-hhk.reg`
-windows7‚ÌhhkƒL[ƒ{[ƒh—pÝ’è
+windows7ã®hhkã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ç”¨è¨­å®š
 
-–³•ÏŠ·¨@windows  
-•ÏŠ·@¨@”¼Šp/‘SŠp  
-”¼Šp/‘SŠp@¨@Alt  
+ç„¡å¤‰æ›â†’ã€€windows  
+å¤‰æ›ã€€â†’ã€€åŠè§’/å…¨è§’  
+åŠè§’/å…¨è§’ã€€â†’ã€€Alt  
