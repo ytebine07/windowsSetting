@@ -6,10 +6,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; キーリスト
 ; http://ahkwiki.net/KeyList
 
+
+; Ctrl押しっぱなし問題の対処
+; https://qiita.com/draganmaistir/items/0bf4a2ff484523a2dee9#installkeybdhook--usehook
+#InstallKeybdHook
+
 ;-------------------------------
 ; include
 ;-------------------------------
 #Include %A_ScriptDir%
+
 ;-------------------------------
 ; 全体共通
 ;-------------------------------
