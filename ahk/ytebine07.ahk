@@ -85,8 +85,8 @@ return
         return
     #IF
 
-    ; Ctrl + : でF10(Macと揃える)
-    ^vkBA::
+    ; Ctrl + ' でF10(Macと揃える)
+    ^'::
     send,{F10}
     return
 
