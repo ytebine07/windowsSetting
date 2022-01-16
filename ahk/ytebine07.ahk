@@ -64,6 +64,12 @@ return
     send,{RIGHT}
     return
 
+    ; Ctrl + f で 右に移動
+    ; Macと揃える
+    ^f::
+    send,{RIGHT}
+    return
+
     ; Ctrl + a で行頭
     ^a::
     send,{HOME}
@@ -73,6 +79,7 @@ return
     ^e::
     send,{END}
     return
+
 
     ; Ctrl + k で選択箇所から後ろを削除
     ; - VSCodeでは設定したくない
