@@ -7,10 +7,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; http://ahkwiki.net/KeyList
 
 
-; Ctrl押しっぱなし問題の対処
-; https://qiita.com/draganmaistir/items/0bf4a2ff484523a2dee9#installkeybdhook--usehook
-#InstallKeybdHook
-
 ;-------------------------------
 ; include
 ;-------------------------------
@@ -50,33 +46,33 @@ return
 ;-------------------------------
 #IF !WinActive("ahk_class TFrm_Clibor") AND !WinActive("ahk_class mintty")
     ; Ctrl + j で エンター
-    ^j::
+    LCtrl & j::
     send,{return}
     return
 
     ; Ctrl + h で バックスペース
-    ^h::
+    LCtrl & h::
     send,{BS}
     return
 
     ; Ctrl + l で 右に移動
-    ^l::
+    LCtrl & l::
     send,{RIGHT}
     return
 
     ; Ctrl + f で 右に移動
     ; Macと揃える
-    ^f::
+    LCtrl & f::
     send,{RIGHT}
     return
 
     ; Ctrl + a で行頭
-    ^a::
+    LCtrl & a::
     send,{HOME}
     return
 
     ; Ctrl + e で 行末
-    ^e::
+    LCtrl & e::
     send,{END}
     return
 
@@ -86,14 +82,14 @@ return
     ; - VSCode以外では設定したい
     ; そのため、ブサイクだがここで個別設定している
     #IF !WinActive("ahk_exe Code.exe")
-        ^k::
+        LCtrl & k::
         send,+{END}
         send,{BS}
         return
     #IF
 
     ; Ctrl + ' でF10(Macと揃える)
-    ^'::
+    LCtrl & '::
     send,{F10}
     return
 
@@ -128,7 +124,7 @@ return
     return
 
     ; デバッグ用
-    ;^q::
+    ;LCtrl & q::
     ;MsgBox, "hoge"
     ;return
 #IF
@@ -137,19 +133,19 @@ return
 ;-------------------------------
 #ifWinActive ahk_exe atom.exe
     ; 移動系
-    ^b::
+    LCtrl & b::
     send {LEFT}
     return
-    ^n::
+    LCtrl & n::
     send {DOWN}
     return
-    ^j::
+    LCtrl & j::
     send {return}
     return
-    ^k::
+    LCtrl & k::
     send {UP}
     return
-    ^p::
+    LCtrl & p::
     send {UP}
     return
 #IF
@@ -158,22 +154,22 @@ return
 ;-------------------------------
 #ifWinActive ahk_exe chrome.exe
     ; Ctrl + p で上
-    ^p::
+    LCtrl & p::
     send {UP}
     return
 
     ; Ctrl + n で下
-    ^n::
+    LCtrl & n::
     send {DOWN}
     return
 
     ; Ctrl + b で右
-    ^b::
+    LCtrl & b::
     send,{LEFT}
     return
 
     ; Ctrl + l で左
-    ^l::
+    LCtrl & l::
     send,{RIGHT}
     return
 
@@ -182,23 +178,23 @@ return
 ; Evernote設定
 ;-------------------------------
 #IF WinActive("ahk_exe Evernote.exe")
-    ^n::
+    LCtrl & n::
     send {DOWN}
     return
 
-    ^k::
+    LCtrl & k::
     send {UP}
     return
 
-    ^p::
+    LCtrl & p::
     send {UP}
     return
 
-    ^b::
+    LCtrl & b::
     send,{LEFT}
     return
 
-    ^l::
+    LCtrl & l::
     send,{RIGHT}
     return
 #IF
@@ -206,32 +202,32 @@ return
 ; Clibor設定
 ;-------------------------------
 #ifWinActive ahk_class TFrm_Clibor
-    ^n::
+    LCtrl & n::
     send,{DOWN}
     return
     Tab::
     send,{DOWN}
     return
-    ^p::
+    LCtrl & p::
     send,{UP}
     return
-    ^k::
+    LCtrl & k::
     send,{UP}
     return
-    ^Tab::
+    LCtrl & Tab::
     send,{UP}
     return
-    ^l::
+    LCtrl & l::
     send,{RIGHT}
     return
-    ^j::
+    LCtrl & j::
     send,{return}
     return
-    ^c::
+    LCtrl & c::
     send,{ESC}
     return
     ; Ctrl + q で検索
-    ^q::
+    LCtrl & q::
     send,{Tab}
     return
 #IF
@@ -242,11 +238,11 @@ return
 ;-------------------------------
 #IfWinActive ahk_exe Code.exe
 
-    ^n::
+    LCtrl & n::
     send,{DOWN}
     return
 
-    ^p::
+    LCtrl & p::
     send,{UP}
     return
 
@@ -265,7 +261,7 @@ return
 ;-------------------------------
 #ifWinActive ahk_exe ApplicationFrameHost.exe
 
-    ^w::
+    LCtrl & w::
     send !{F4}
     return
 
@@ -275,16 +271,16 @@ return
 ;-------------------------------
 #ifWinActive ahk_class Qt5QWindowIcon
 
-    ^n::
+    LCtrl & n::
     send {DOWN}
     return
-    ^k::
+    LCtrl & k::
     send {UP}
     return
-    ^p::
+    LCtrl & p::
     send {UP}
     return
-    ^l::
+    LCtrl & l::
     send,{RIGHT}
     return
 
@@ -294,16 +290,16 @@ return
 ;-------------------------------
 #ifWinActive ahk_class WindowsForms10.Window.8.app.0.30495d1_r6_ad1
 
-    ^n::
+    LCtrl & n::
     send {DOWN}
     return
-    ^k::
+    LCtrl & k::
     send {UP}
     return
-    ^p::
+    LCtrl & p::
     send {UP}
     return
-    ^l::
+    LCtrl & l::
     send,{RIGHT}
     return
 
@@ -312,10 +308,10 @@ return
 ; エクスプローラ設定
 ;-------------------------------
 #ifWinActive ahk_class CabinetWClass
-    ^n::
+    LCtrl & n::
     send,{DOWN}
     return
-    ^p::
+    LCtrl & p::
     send,{UP}
     return
 #IF
@@ -323,10 +319,10 @@ return
 ; Windows Power Lancher
 ;-------------------------------
 #IfWinActive ahk_exe PowerLauncher.exe
-    ^n::
+    LCtrl & n::
     send,{DOWN}
     return
-    ^p::
+    LCtrl & p::
     send,{UP}
     return
 #IF
