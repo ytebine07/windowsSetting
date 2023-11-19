@@ -16,9 +16,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; 全体共通
 ;-------------------------------
 ; Alt + e で Windows + e(Windowsエクスプローラを開く)
-LAlt & e::
-send,#e
-return
+;LAlt & e::
+;send,#e
+;return
 
 ;右Altをアプリケーションキー
 RAlt::
@@ -163,12 +163,12 @@ return
     send {DOWN}
     return
 
-    ; Ctrl + b で右
+    ; Ctrl + b で左
     LCtrl & b::
     send,{LEFT}
     return
 
-    ; Ctrl + l で左
+    ; Ctrl + l で右
     LCtrl & l::
     send,{RIGHT}
     return
@@ -305,12 +305,38 @@ return
 
 #IF
 ;-------------------------------
+; 秀丸設定
+;-------------------------------
+#ifWinActive ahk_class Hidemaru32Class
+
+    LCtrl & n::
+    send {DOWN}
+    return
+    LCtrl & k::
+    send {UP}
+    return
+    LCtrl & p::
+    send {UP}
+    return
+    LCtrl & l::
+    send,{RIGHT}
+    return
+
+    ; Ctrl + b で左
+    LCtrl & b::
+    send,{LEFT}
+    return
+
+#IF
+
+;-------------------------------
 ; エクスプローラ設定
 ;-------------------------------
 #ifWinActive ahk_class CabinetWClass
     LCtrl & n::
     send,{DOWN}
     return
+
     LCtrl & p::
     send,{UP}
     return
@@ -322,6 +348,18 @@ return
     LCtrl & n::
     send,{DOWN}
     return
+    LCtrl & p::
+    send,{UP}
+    return
+#IF
+;-------------------------------
+; Windows Power Toys
+;-------------------------------
+#IfWinActive ahk_exe PowerToys.PowerLauncher.exe
+    LCtrl & n::
+    send,{DOWN}
+    return
+
     LCtrl & p::
     send,{UP}
     return
